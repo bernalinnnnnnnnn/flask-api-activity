@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Submission Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .form-result-container {
+            width: 50%;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 20px 0;
+            background-color: #f9f9f9;
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .form-value {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Added Item</h1>
+    <div class="form-result-container">
+        <div class="form-row">
+            <span class="form-label">Product:</span>
+            <span class="form-value">{{ name }}</span>
+        </div>
+        <div class="form-row">
+            <span class="form-label">Price:</span>
+            <span class="form-value">${{ price }}</span>
+        </div>
+    </div>
+</body>
+</html>
