@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Headlines</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>Headlines</h1>
+    {% for article in Article %}
+    <b>{{article.title}}</b><br />
+    <i>{{article.publication}}</i><br />
+    <p>{{article.summary}}</p>
+    {% endfor %}
+</body>
+</html>
